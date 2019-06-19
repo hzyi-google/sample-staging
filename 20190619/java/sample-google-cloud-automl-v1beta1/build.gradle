@@ -1,0 +1,44 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+description = 'GAPIC samples for google-cloud-automl-v1beta1'
+group = 'com.google.cloud'
+version = '0.0.0-SNAPSHOT'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
+compileJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
+dependencies {
+  compile 'com.google.api:api-common:1.6.0'
+  compile 'commons-cli:commons-cli:1.4'
+  compile project(':gapic-google-cloud-automl-v1beta1')
+}
+
+task fatJar(type: Jar) {
+  baseName = 'sample-google-cloud-automl-v1beta1-all'
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+  with jar
+}
+
+clean {
+  delete 'all-jars'
+}
+
+run {
+  mainClassName = getProperty('mainClass')
+}

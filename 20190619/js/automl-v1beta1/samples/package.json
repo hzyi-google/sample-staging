@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-docs-samplesautoml",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Google LLC",
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "yargs": "^13.1.0",
+    "@google-cloud/automl": "file:.."
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}

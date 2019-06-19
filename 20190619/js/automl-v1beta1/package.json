@@ -1,0 +1,44 @@
+{
+  "repository": "GoogleCloudPlatform/google-cloud-node",
+  "name": "@google-cloud/automl",
+  "version": "0.1.0",
+  "author": "Google LLC",
+  "description": "Cloud AutoML API client for Node.js",
+  "main": "src/index.js",
+  "files": [
+    "protos",
+    "src",
+    "AUTHORS",
+    "COPYING"
+  ],
+  "keywords": [
+    "google apis client",
+    "google api client",
+    "google apis",
+    "google api",
+    "google",
+    "google cloud platform",
+    "google cloud",
+    "cloud",
+    "google automl",
+    "automl",
+    "Cloud AutoML API"
+  ],
+  "dependencies": {
+    "lodash.union": "^4.6.0",
+    "protobufjs": "^6.8.0",
+    "google-gax": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "through2": "^2.0.3"
+  },
+  "scripts": {
+    "smoke-test": "mocha smoke-test/*.js --timeout 5000",
+    "test": "mocha test/*.js"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}
